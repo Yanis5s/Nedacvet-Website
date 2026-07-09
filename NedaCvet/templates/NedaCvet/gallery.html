@@ -1,0 +1,57 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nedacvet - Галерия</title>
+  <!-- Use the same stylesheet as home -->
+  <link rel="stylesheet" href="{% static 'css/gallery.css' %}">
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+  <link rel="stylesheet" href="{% static 'css/footer.css' %}">
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <a href="{% url 'home' %}">Недацвет</a>
+    </div>
+    <nav>
+      <a href="{% url 'home' %}">начало</a>
+      <a href="{% url 'gallery' %}" style="color:#fff;">галерия</a>
+      <a href="{% url 'contact' %}">контакти</a>
+    </nav>
+  </header>
+
+
+  <div class="gallery-page">
+    <div class="gallery-text">
+      <p>
+        <a href="{% url 'panels' %}">ЛАЗЕРНО ИЗРЯЗАНИ ПАНА</a>
+      </p>
+        <p>
+        <a href="{% url 'railings' %}">АЛУМИНИЕВИ / МЕТАЛНИ / СТЪКЛЕНИ ПАРАПЕТИ</a>
+      </p>
+      <p>
+        <a href="{% url 'aluminumPergolas' %}">АЛУМИНИЕВИ ПЕРГУЛИ</a>
+      </p>
+        <p>
+        <a href="{% url 'rollerBlinds' %}">РОЛЕТНИ ЩОРИ</a>
+      <p>
+        <a href="{% url 'exteriorDesign' %}">ЕКСТЕРИОРЕН ДИЗАЙН</a>
+      </p>
+
+    </div>
+    <div class="gallery-grid">
+      <img src="{% static 'images/facade1.jpg' %}" alt="Проект 1">
+      <img src="{% static 'images/fence2.jpg' %}" alt="Проект 2">
+      <img src="{% static 'images/pano2.jpg' %}" alt="Проект 3">
+      <img src="{% static 'images/railing6.png' %}" alt="Проект 4">
+      <img src="{% static 'images/pergula2.jpg' %}" alt="Проект 5">
+      <img src="{% static 'images/pano1.jpg' %}" alt="Проект 6">
+    </div>
+  </div>
+  <footer>
+    <center><span style="color: #fff;">[WORK IN PROGRESS]</span></center>
+  </footer>
+</body>
+</html>

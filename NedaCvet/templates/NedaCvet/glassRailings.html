@@ -1,0 +1,61 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nedacvet - Лазерно изрязани пана</title>
+  <link rel="stylesheet" href="{% static 'css/galleryGrids.css' %}">
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+  <link rel="stylesheet" href="{% static 'css/footer.css' %}">
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <a href="{% url 'home' %}">Недацвет</a>
+    </div>
+    <nav>
+      <a href="{% url 'home' %}">начало</a>
+      <a href="{% url 'gallery' %}" style="color:#fff;">галерия</a>
+      <a href="{% url 'contact' %}">контакти</a>
+    </nav>
+  </header>
+
+  <div class="gallery-page">
+    <!-- Секция с текст/категории -->
+    <div class="gallery-text">
+       <p><a href="{% url 'panels' %}">ЛАЗЕРНО ИЗРЯЗАНИ ПАНА</a></p>
+       <!-- Можеш да добавиш и другите линкове тук -->
+    </div>
+
+    <!-- Основната решетка -->
+    <div class="gallery-grid">
+      <div class="square">
+        <img src="{% static 'images/parapet1.jpg' %}" alt="Проект 1">
+      </div>
+      <div class="square">
+        <img src="{% static 'images/parapet2.jpg' %}" alt="Проект 2">
+      </div>
+      <div class="square">
+        <img src="{% static 'images/parapet3.jpg' %}" alt="Проект 3">
+      </div>
+      <div class="square">
+        <img src="{% static 'images/railing1.png' %}" alt="Проект 3">
+      </div>
+      <div class="square">
+        <img src="{% static 'images/railing2.png' %}" alt="Проект 3">
+      </div>
+      <div class="square">
+        <img src="{% static 'images/railing3.png' %}" alt="Проект 3">
+      </div>
+      <div class="square">
+        <img src="{% static 'images/railing4.png' %}" alt="Проект 3">
+      </div>
+
+  </div>
+
+  <footer>
+    <center><span style="color: #fff;">[WORK IN PROGRESS]</span></center>
+  </footer>
+</body>
+</html>

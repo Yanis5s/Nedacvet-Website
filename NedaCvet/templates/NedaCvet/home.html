@@ -1,0 +1,136 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Недацвет</title>
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+  <link rel="stylesheet" href="{% static 'css/footer.css' %}">
+</head>
+<body>
+
+  <header>
+    <div class="logo">
+      <a href="{% url 'home' %}">Недацвет</a>
+    </div>
+    <nav>
+      <a href="">начало</a>
+      <a href="{% url 'gallery' %}">галерия</a>
+      <a href="{% url 'contact' %}">контакти</a>
+    </nav>
+  </header>
+
+  <div class="image-container" id="imgContainer">
+    <div class="slideShow" id="mainSlideShow">
+      <img draggable="false" src="{% static 'images/pano1.jpg' %}" alt="">
+
+        <img draggable="false" src="{% static 'images/pergula1.jpg' %}" alt="">
+        <img draggable="false" src="{% static 'images/pano2.jpg' %}" alt="">
+        <img draggable="false" src="{% static 'images/pergula2.jpg' %}" alt="">
+    </div>
+    <!-- Бутоните се генерират автоматично от скрипта отдолу -->
+    <div class="slide-buttons-container" id="dots-container"></div>
+  </div>
+
+  <div class="about-us">
+    <div class="block">
+      <img draggable="false" width="60px" style="filter: brightness(0) saturate(100%) invert(66%) sepia(67%) saturate(210%) hue-rotate(348deg) brightness(83%) contrast(93%);" src="{% static 'images/arrowDown.png' %}" alt="">
+      <p>
+        Избирането на Nedacvet означава над 20 години опит в изработката на парапети и корнизи от метал.
+        <br><br>
+        Ние използваме само висококачествени материали и се гордеем с прецизното изпълнение на всеки проект, можете да разчитате на професионализъм, внимание към детайла и дълготрайни резултати.
+        <br><br>
+        Подхождаме индивидуално към нуждите на всеки клиент, като осигуряваме надеждност и завършваме всеки проект навреме.
+      </p>
+    </div>
+    <div class="block">
+      <img draggable="false" width="60px" style="filter: brightness(0) saturate(100%) invert(66%) sepia(67%) saturate(210%) hue-rotate(348deg) brightness(83%) contrast(93%);" src="{% static 'images/arrowDown.png' %}" alt="">
+      <p>
+        Създадена през 2000 г преди Христа, Nedacvet се специализира в изработката на висококачествени парапети от стомана, желязо и други метали. <br><br>
+        Освен парапети, изработваме и елегантни корнизи, съчетаващи здравина и стил, за да подобрят всяко пространство.
+        <br><br>
+        С над две десетилетия опит се гордеем с качествено майсторство и надеждно обслужване.
+      </p>
+    </div>
+  </div>
+
+  <div class="gallery-container">
+    <div class="gallery-about">
+      <p>
+        Разглеждайки страниците на нашата галерия, ще откриете богат избор от реализирани от нас проекти – метални парапети, огради, перголи, ролетки, както и декоративни корнизи от стиропор. Всяко изделие е изработено с внимание към детайла и съчетава здравина, функционалност и елегантна визия.
+        <br><br>
+        Нашият екип разполага с дългогодишен опит и умения, които ни позволяват да създаваме решения, отговарящи на най-високите стандарти и на индивидуалните изисквания на всеки клиент. Независимо дали става дума за частен дом, търговски обект или голям инвестиционен проект, ние се стремим да предложим резултат, който да впечатлява с качество и стил.
+        <br><br>
+        Ние поемаме целия процес – от първоначалния оглед на място и професионалните консултации, през изготвяне на мостра и детайлен работен проект, до самото производство и прецизен монтаж. Така гарантираме, че крайният продукт ще бъде напълно съобразен с Вашите нужди, ще има дълъг живот и ще допринесе за завършената визия на всяко пространство.
+      </p>
+      <br><br>
+      <a href="{% url 'gallery' %}">вижте още</a>
+      <br><br>
+    </div>
+    <div class="gallery-showcase">
+        <img draggable="false" src="{% static 'images/pano1.jpg' %}" alt="">
+        <img draggable="false" src="{% static 'images/pano2.jpg' %}" alt="">
+        <img draggable="false" src="{% static 'images/parapet1.jpg' %}" alt="">
+        <img draggable="false" src="{% static 'images/pergula1.jpg' %}" alt="">
+        <img draggable="false" src="{% static 'images/pergula2.jpg' %}" alt="">
+        <img draggable="false" src="{% static 'images/pergula3.jpg' %}" alt="">
+    </div>
+  </div>
+
+  <footer>
+    <center><span style="color: #fff;">[WORK IN PROGRESS]</span></center>
+  </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const slideShow = document.getElementById('mainSlideShow');
+      const slides = slideShow.querySelectorAll('img');
+      const dotsContainer = document.getElementById('dots-container');
+      let slideIndex = 0;
+      let timer;
+
+      // 1. Автоматично създаване на бутони спрямо броя на снимките
+      slides.forEach((_, index) => {
+        const dot = document.createElement('div');
+        dot.classList.add('slide-button');
+        if (index === 0) dot.classList.add('active-btn');
+
+        dot.addEventListener('click', () => {
+          goToSlide(index);
+          resetTimer();
+        });
+        dotsContainer.appendChild(dot);
+      });
+
+      const dots = document.querySelectorAll('.slide-button');
+
+      // 2. Функция за плъзгане (Slide)
+      function goToSlide(n) {
+        slideIndex = n;
+        slideShow.style.transform = `translateX(-${slideIndex * 100}%)`;
+
+        // Обновяване на активния бутон
+        dots.forEach(dot => dot.classList.remove('active-btn'));
+        if (dots[slideIndex]) dots[slideIndex].classList.add('active-btn');
+      }
+
+      // 3. Автоматично превъртане
+      function startTimer() {
+        timer = setInterval(() => {
+          slideIndex++;
+          if (slideIndex >= slides.length) slideIndex = 0;
+          goToSlide(slideIndex);
+        }, 5000);
+      }
+
+      function resetTimer() {
+        clearInterval(timer);
+        startTimer();
+      }
+
+      startTimer();
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,130 @@
+html, body {
+  height: 100%;
+}
+
+body{
+  padding: 0;
+  margin: 0;
+  background-color: rgba(222, 222, 222, 1);
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  color: #424141;
+}
+
+
+img{
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+header{
+  display: flex;
+  width: 100%;
+  height: 80px;
+  z-index: 100;
+  letter-spacing: 5px;
+  box-shadow: 0px 5px 10px 0.5px rgb(159, 158, 158);
+}
+
+/* LOGO */
+header .logo{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40%;
+  background-color: rgba(222, 222, 222, 0.9);
+  color: #171717;
+}
+
+/* Make the logo link not look like a hyperlink */
+.logo a {
+  text-decoration: none !important;
+  color: #171717 !important;
+  font-weight: bold;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+.logo a:hover {
+  color: #555;
+}
+
+header nav {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 60%;
+  background: rgba(194, 152, 113, 0.9);
+  color: #fff;
+  font-size: 16px;
+  text-transform: uppercase;
+
+}
+
+header nav a {
+  /* margin: 15px; */
+  text-decoration: none;
+  color: #fcfcfc;
+  transition: 0.35s ease;
+}
+
+header nav a:hover{
+  color: #c7c4c4;
+}
+
+.contact-page{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+
+  width: 80%;
+  height: 60%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+
+  text-transform: uppercase;
+  transition: 0.5s ease;
+}
+
+.contact-page h1 {
+  letter-spacing: 5px;
+}
+
+.contact-form{
+  width: 30%;
+  transition: 0.5s ease;
+}
+
+.form-group{
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+}
+
+.form-group input, textarea{
+  outline: none;
+  border: none;
+  padding: 5px;
+  border-radius: 3px;
+  box-shadow: 3px 4px 5px 0.5px rgba(0, 0, 0, 0.337), 2px 2px 5px 0.5px rgba(0, 0, 0, 0.209) inset;
+}
+
+.form-group input{
+  height: 30px;
+}
+
+.contact-btn{
+  outline: none;
+  border: none;
+  margin-left: 10px;
+  height: 30px;
+  border-radius: 5px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  background: rgb(240, 186, 135);
+  box-shadow: 4px 4px 10px 2px rgb(168, 168, 168), 4px 4px 10px 2px rgb(233, 192, 142) inset;
+}
