@@ -1,49 +1,4 @@
-/* Глобални настройки */
-html, body {
-  margin: 0;
-  padding: 0;
-  background: #ffffff;
-  font-family: Arial, Helvetica, sans-serif;
-}
 
-header {
-  top: 0;
-  position: fixed;
-  display: flex;
-  width: 100%;
-  height: 80px;
-  z-index: 100;
-  letter-spacing: 5px;
-}
-
-header .logo {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 40%;
-  background-color: rgba(222, 222, 222, 0.9);
-}
-
-.logo a {
-  text-decoration: none !important;
-  color: #171717 !important;
-  font-weight: bold;
-  font-size: 28px;
-}
-
-header nav {
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  width: 60%;
-  background: rgba(194, 152, 113, 0.9);
-  text-transform: uppercase;
-}
-
-header nav a {
-  text-decoration: none;
-  color: #fcfcfc;
-}
 
 /* Контейнер на галерията */
 .gallery-page {
