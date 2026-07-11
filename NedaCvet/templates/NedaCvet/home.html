@@ -1,6 +1,6 @@
 {% load static %}
 <!DOCTYPE html>
-<html lang="en">
+<html lang="bg">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,8 +14,9 @@
     <div class="logo">
       <a href="{% url 'home' %}">Недацвет</a>
     </div>
+
     <nav>
-      <a href="">начало</a>
+      <a href="{% url 'home' %}">начало</a>
       <a href="{% url 'gallery' %}">галерия</a>
       <a href="{% url 'contact' %}">контакти</a>
     </nav>
@@ -23,64 +24,273 @@
 
   <div class="image-container" id="imgContainer">
     <div class="slideShow" id="mainSlideShow">
-      <img draggable="false" src="{% static 'images/pano1.jpg' %}" alt="">
-
-        <img draggable="false" src="{% static 'images/pergula1.jpg' %}" alt="">
-        <img draggable="false" src="{% static 'images/pano2.jpg' %}" alt="">
-        <img draggable="false" src="{% static 'images/pergula2.jpg' %}" alt="">
+      <img draggable="false" src="{% static 'images/fence2.jpg' %}" alt="Ограда">
+      <img draggable="false" src="{% static 'images/Railings/railing10.png' %}" alt="Парапет">
+      <img draggable="false" src="{% static 'images/Railings/panel7.png' %}" alt="Парапет">
+      <img draggable="false" src="{% static 'images/Railings/railing7.png' %}" alt="Парапет">
+      <img draggable="false" src="{% static 'images/Railings/panel3.png' %}" alt="Парапет">
     </div>
-    <!-- Бутоните се генерират автоматично от скрипта отдолу -->
+
     <div class="slide-buttons-container" id="dots-container"></div>
   </div>
 
-  <div class="about-us">
-    <div class="block">
-      <img draggable="false" width="60px" style="filter: brightness(0) saturate(100%) invert(66%) sepia(67%) saturate(210%) hue-rotate(348deg) brightness(83%) contrast(93%);" src="{% static 'images/arrowDown.png' %}" alt="">
-      <p>
-        Избирането на Nedacvet означава над 20 години опит в изработката на парапети и корнизи от метал.
-        <br><br>
-        Ние използваме само висококачествени материали и се гордеем с прецизното изпълнение на всеки проект, можете да разчитате на професионализъм, внимание към детайла и дълготрайни резултати.
-        <br><br>
-        Подхождаме индивидуално към нуждите на всеки клиент, като осигуряваме надеждност и завършваме всеки проект навреме.
-      </p>
-    </div>
-    <div class="block">
-      <img draggable="false" width="60px" style="filter: brightness(0) saturate(100%) invert(66%) sepia(67%) saturate(210%) hue-rotate(348deg) brightness(83%) contrast(93%);" src="{% static 'images/arrowDown.png' %}" alt="">
-      <p>
-        Създадена през 2000 г преди Христа, Nedacvet се специализира в изработката на висококачествени парапети от стомана, желязо и други метали. <br><br>
-        Освен парапети, изработваме и елегантни корнизи, съчетаващи здравина и стил, за да подобрят всяко пространство.
-        <br><br>
-        С над две десетилетия опит се гордеем с качествено майсторство и надеждно обслужване.
-      </p>
-    </div>
-  </div>
+  <section class="features-section">
+    <article class="feature-card">
+      <div class="feature-icon">
+        <span>✓</span>
+      </div>
+      <div class="feature-text">
+        <h3>Качество и прецизност</h3>
+        <p>Използваме висококачествени материали и прецизна изработка за дълготрайни резултати.</p>
+      </div>
+    </article>
 
-  <div class="gallery-container">
-    <div class="gallery-about">
-      <p>
-        Разглеждайки страниците на нашата галерия, ще откриете богат избор от реализирани от нас проекти – метални парапети, огради, перголи, ролетки, както и декоративни корнизи от стиропор. Всяко изделие е изработено с внимание към детайла и съчетава здравина, функционалност и елегантна визия.
-        <br><br>
-        Нашият екип разполага с дългогодишен опит и умения, които ни позволяват да създаваме решения, отговарящи на най-високите стандарти и на индивидуалните изисквания на всеки клиент. Независимо дали става дума за частен дом, търговски обект или голям инвестиционен проект, ние се стремим да предложим резултат, който да впечатлява с качество и стил.
-        <br><br>
-        Ние поемаме целия процес – от първоначалния оглед на място и професионалните консултации, през изготвяне на мостра и детайлен работен проект, до самото производство и прецизен монтаж. Така гарантираме, че крайният продукт ще бъде напълно съобразен с Вашите нужди, ще има дълъг живот и ще допринесе за завършената визия на всяко пространство.
-      </p>
-      <br><br>
-      <a href="{% url 'gallery' %}">вижте още</a>
-      <br><br>
-    </div>
-    <div class="gallery-showcase">
-        <img draggable="false" src="{% static 'images/pano1.jpg' %}" alt="">
-        <img draggable="false" src="{% static 'images/pano2.jpg' %}" alt="">
-        <img draggable="false" src="{% static 'images/parapet1.jpg' %}" alt="">
-        <img draggable="false" src="{% static 'images/pergula1.jpg' %}" alt="">
-        <img draggable="false" src="{% static 'images/pergula2.jpg' %}" alt="">
-        <img draggable="false" src="{% static 'images/pergula3.jpg' %}" alt="">
-    </div>
-  </div>
+    <article class="feature-card">
+      <div class="feature-icon">
+        <span>30+</span>
+      </div>
+      <div class="feature-text">
+        <h3>30+ години опит</h3>
+        <p>Натрупан професионален опит в изработката на парапети, корнизи и метални конструкции.</p>
+      </div>
+    </article>
 
-  <footer>
-    <center><span style="color: #fff;">[WORK IN PROGRESS]</span></center>
-  </footer>
+    <article class="feature-card">
+      <div class="feature-icon">
+        <span>⚒</span>
+      </div>
+      <div class="feature-text">
+        <h3>Индивидуален подход</h3>
+        <p>Подхождаме към всеки проект според нуждите, желанията и пространството на клиента.</p>
+      </div>
+    </article>
+
+    <article class="feature-card">
+      <div class="feature-icon">
+        <span>☎</span>
+      </div>
+      <div class="feature-text">
+        <h3>Коректност и сервиз</h3>
+        <p>Държим на надеждно обслужване, спазване на срокове и коректно отношение.</p>
+      </div>
+    </article>
+  </section>
+
+  <section class="about-preview-section">
+    <div class="about-preview-content">
+      <span class="section-label">За нас</span>
+
+      <h2>
+        Метални решения с характер<br>
+        и безкомпромисно качество
+      </h2>
+
+      <p>
+        Недацвет е българска компания с над 30 години опит в проектирането,
+        производството и монтажа на метални парапети, огради, перголи, ролетки
+        и декоративни елементи.
+      </p>
+
+      <p>
+        Съчетаваме здравина, функционалност и естетика, за да превърнем всяко
+        пространство в сигурно, красиво и стойностно.
+      </p>
+
+      <a class="about-preview-btn" href="{% url 'gallery' %}">
+        Повече за нас
+      </a>
+    </div>
+
+    <div class="about-preview-image">
+      <img draggable="false" src="{% static 'images/fence2.jpg' %}" alt="Метална ограда Недацвет">
+    </div>
+  </section>
+
+  <section class="services-section">
+    <div class="services-heading">
+      <span></span>
+      <h2>Нашите услуги</h2>
+    </div>
+
+    <div class="services-grid">
+      <article class="service-card">
+        <div class="service-icon">
+          <span>✦</span>
+        </div>
+        <div class="service-content">
+          <h3>Лазерно рязани пана</h3>
+          <p>Декоративни метални пана по индивидуален дизайн за огради, фасади, тераси и интериор.</p>
+          <a href="{% url 'gallery' %}">Виж повече →</a>
+        </div>
+      </article>
+
+      <article class="service-card">
+        <div class="service-icon">
+          <span>▱</span>
+        </div>
+        <div class="service-content">
+          <h3>Парапети</h3>
+          <p>Изработка и монтаж на вътрешни и външни парапети от метал, стомана, алуминий и стъкло.</p>
+          <a href="{% url 'gallery' %}">Виж повече →</a>
+        </div>
+      </article>
+
+      <article class="service-card">
+        <div class="service-icon">
+          <span>▤</span>
+        </div>
+        <div class="service-content">
+          <h3>Перголи</h3>
+          <p>Здрави и елегантни перголи по индивидуален проект за дворове, тераси и заведения.</p>
+          <a href="{% url 'gallery' %}">Виж повече →</a>
+        </div>
+      </article>
+
+      <article class="service-card">
+        <div class="service-icon">
+          <span>▭</span>
+        </div>
+        <div class="service-content">
+          <h3>Корнизи</h3>
+          <p>Декоративни корнизи и елементи, които допълват фасадата и придават завършен вид.</p>
+          <a href="{% url 'gallery' %}">Виж повече →</a>
+        </div>
+      </article>
+
+      <article class="service-card">
+        <div class="service-icon">
+          <span>▦</span>
+        </div>
+        <div class="service-content">
+          <h3>Ролетни щори</h3>
+          <p>Ролетни системи и щори за защита, сигурност, комфорт и по-добър контрол на светлината.</p>
+          <a href="{% url 'gallery' %}">Виж повече →</a>
+        </div>
+      </article>
+
+      <article class="service-card">
+        <div class="service-icon">
+          <span>＋</span>
+        </div>
+        <div class="service-content">
+          <h3>И много други</h3>
+          <p>Изработваме различни метални конструкции и декоративни решения според нуждите на клиента.</p>
+          <a href="{% url 'contact' %}">Запитване →</a>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="process-section">
+    <div class="process-heading">
+      <span></span>
+      <h2>Целият процес</h2>
+    </div>
+
+    <div class="process-timeline">
+      <article class="process-step">
+        <div class="process-number">1</div>
+        <h3>Консултация</h3>
+        <p>Обсъждаме вашите идеи и нужди, даваме професионални насоки и решения.</p>
+      </article>
+
+      <article class="process-step">
+        <div class="process-number">2</div>
+        <h3>Проектиране</h3>
+        <p>Изготвяме 3D проект и техническо предложение, съобразено с вашия обект.</p>
+      </article>
+
+      <article class="process-step">
+        <div class="process-number">3</div>
+        <h3>Изработка</h3>
+        <p>Произвеждаме с внимание към детайла и контрол на всяка стъпка.</p>
+      </article>
+
+      <article class="process-step">
+        <div class="process-number">4</div>
+        <h3>Монтаж</h3>
+        <p>Професионален монтаж от опитен екип с прецизност и сигурност.</p>
+      </article>
+
+      <article class="process-step">
+        <div class="process-number">5</div>
+        <h3>Поддръжка</h3>
+        <p>Осигуряваме съдействие и поддръжка след завършване на проекта.</p>
+      </article>
+    </div>
+  </section>
+
+  <section class="cta-section">
+    <div class="cta-inner">
+      <div class="cta-icon">
+        <span>☎</span>
+      </div>
+
+      <div class="cta-text">
+        <h2>Готови за вашия проект?</h2>
+        <p>Свържете се с нас за безплатна консултация и оферта.</p>
+      </div>
+
+      <a class="cta-btn" href="{% url 'contact' %}">
+        Свържете се с нас
+      </a>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+  <div class="footer-container">
+
+    <div class="footer-column footer-brand">
+      <h2>Недацвет</h2>
+      <p>
+        Над 30 години опит в изработката на метални парапети, огради, перголи,
+        ролетни щори и декоративни елементи.
+      </p>
+    </div>
+
+    <div class="footer-column">
+      <h3>Навигация</h3>
+      <a href="{% url 'home' %}">Начало</a>
+      <a href="{% url 'gallery' %}">Галерия</a>
+      <a href="{% url 'gallery' %}">Услуги</a>
+      <a href="{% url 'contact' %}">Контакти</a>
+    </div>
+
+    <div class="footer-column">
+      <h3>Услуги</h3>
+      <a href="{% url 'gallery' %}">Лазерно рязани пана</a>
+      <a href="{% url 'gallery' %}">Парапети</a>
+      <a href="{% url 'gallery' %}">Перголи</a>
+      <a href="{% url 'gallery' %}">Корнизи</a>
+      <a href="{% url 'gallery' %}">Ролетни щори</a>
+      <a >И много други</a>
+    </div>
+
+    <div class="footer-column footer-contact">
+      <h3>Контакти</h3>
+
+      <p class="footer-phone-row">
+  <span>☎</span>
+
+  <span class="footer-phone-links">
+    <a href="tel:+359888457065">+359 888 457 065</a>
+    <a href="tel:+359877171301">+359 877 171 301</a>
+  </span>
+</p>
+
+      <p>
+        <span>✉</span>
+        <a href="mailto:nedacvet@abv.bg">nedacvet@abv.bg</a>
+      </p>
+
+      <p>
+        <span>⌖</span>
+        гр. Бургас, България
+      </p>
+    </div>
+
+  </div>
+</footer>
 
   <script>
     document.addEventListener('DOMContentLoaded', () => {
@@ -90,36 +300,43 @@
       let slideIndex = 0;
       let timer;
 
-      // 1. Автоматично създаване на бутони спрямо броя на снимките
       slides.forEach((_, index) => {
         const dot = document.createElement('div');
         dot.classList.add('slide-button');
-        if (index === 0) dot.classList.add('active-btn');
+
+        if (index === 0) {
+          dot.classList.add('active-btn');
+        }
 
         dot.addEventListener('click', () => {
           goToSlide(index);
           resetTimer();
         });
+
         dotsContainer.appendChild(dot);
       });
 
       const dots = document.querySelectorAll('.slide-button');
 
-      // 2. Функция за плъзгане (Slide)
       function goToSlide(n) {
         slideIndex = n;
         slideShow.style.transform = `translateX(-${slideIndex * 100}%)`;
 
-        // Обновяване на активния бутон
         dots.forEach(dot => dot.classList.remove('active-btn'));
-        if (dots[slideIndex]) dots[slideIndex].classList.add('active-btn');
+
+        if (dots[slideIndex]) {
+          dots[slideIndex].classList.add('active-btn');
+        }
       }
 
-      // 3. Автоматично превъртане
       function startTimer() {
         timer = setInterval(() => {
           slideIndex++;
-          if (slideIndex >= slides.length) slideIndex = 0;
+
+          if (slideIndex >= slides.length) {
+            slideIndex = 0;
+          }
+
           goToSlide(slideIndex);
         }, 5000);
       }

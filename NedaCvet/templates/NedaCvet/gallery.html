@@ -1,21 +1,22 @@
 {% load static %}
 <!DOCTYPE html>
-<html lang="en">
+<html lang="bg">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Nedacvet - Галерия</title>
-  <!-- Use the same stylesheet as home -->
+  <title>Недацвет - Галерия</title>
 
   <link rel="stylesheet" href="{% static 'css/style.css' %}">
   <link rel="stylesheet" href="{% static 'css/gallery.css' %}">
   <link rel="stylesheet" href="{% static 'css/footer.css' %}">
 </head>
 <body>
+
   <header>
     <div class="logo">
       <a href="{% url 'home' %}">Недацвет</a>
     </div>
+
     <nav>
       <a href="{% url 'home' %}">начало</a>
       <a href="{% url 'gallery' %}" style="color:#fff;">галерия</a>
@@ -23,36 +24,295 @@
     </nav>
   </header>
 
+  <main class="projects-page">
+    <h1>Нашите проекти</h1>
 
-  <div class="gallery-page">
-    <div class="gallery-text">
+    <div class="gallery-filters">
+      <button class="filter-btn active" data-filter="all">Всички проекти</button>
+      <button class="filter-btn" data-filter="laser">Лазерно изрязани пана</button>
+      <button class="filter-btn" data-filter="railings">Парапети</button>
+      <button class="filter-btn" data-filter="pergolas">Алуминиеви перголи</button>
+      <button class="filter-btn" data-filter="blinds">Ролетни щори</button>
+      
+    </div>
+
+    <section class="projects-grid">
+
+      <!-- Лазерно изрязани пана -->
+      <div class="project-card" data-category="laser">
+        <img src="{% static 'images/LaserCutPanels/fence2.jpg' %}" alt="Лазерно изрязано пано">
+      </div>
+      <div class="project-card" data-category="laser">
+        <img src="{% static 'images/LaserCutPanels/parapet2.jpg' %}" alt="Лазерно изрязано пано">
+      </div>
+      <div class="project-card" data-category="laser">
+        <img src="{% static 'images/LaserCutPanels/pano2.jpg' %}" alt="Лазерно изрязано пано">
+      </div>
+
+      <div class="project-card" data-category="laser">
+        <img src="{% static 'images/LaserCutPanels/pano1.jpg' %}" alt="Лазерно изрязано пано">
+      </div>
+
+      <div class="project-card" data-category="laser">
+        <img src="{% static 'images/LaserCutPanels/panel8.png' %}" alt="Лазерно изрязано пано">
+      </div>
+
+      <div class="project-card" data-category="laser">
+        <img src="{% static 'images/LaserCutPanels/panel7.png' %}" alt="Лазерно изрязано пано">
+      </div>
+
+      <div class="project-card" data-category="laser">
+        <img src="{% static 'images/LaserCutPanels/panel6.png' %}" alt="Лазерно изрязано пано">
+      </div>
+
+      <div class="project-card" data-category="laser">
+        <img src="{% static 'images/LaserCutPanels/panel5.png' %}" alt="Лазерно изрязано пано">
+      </div>
+
+      <div class="project-card" data-category="laser">
+        <img src="{% static 'images/LaserCutPanels/panel4.png' %}" alt="Лазерно изрязано пано">
+      </div>
+      <div class="project-card" data-category="laser">
+        <img src="{% static 'images/LaserCutPanels/panel3.png' %}" alt="Лазерно изрязано пано">
+      </div>
+      <div class="project-card" data-category="laser">
+        <img src="{% static 'images/LaserCutPanels/panel2.png' %}" alt="Лазерно изрязано пано">
+      </div>
+      <div class="project-card" data-category="laser">
+        <img src="{% static 'images/LaserCutPanels/panel1.png' %}" alt="Лазерно изрязано пано">
+      </div>
+      <div class="project-card" data-category="laser">
+        <img src="{% static 'images/LaserCutPanels/ograda2.jpg' %}" alt="Лазерно изрязано пано">
+      </div>
+      <div class="project-card" data-category="laser">
+        <img src="{% static 'images/LaserCutPanels/fence2.jpg' %}" alt="Лазерно изрязано пано">
+      </div>
+
+
+      <!-- Парапети -->
+      <div class="project-card" data-category="railings">
+        <img src="{% static 'images/Railings/railing10.png' %}" alt="Парапет">
+      </div>
+      <div class="project-card" data-category="railings">
+        <img src="{% static 'images/Railings/railing12.png' %}" alt="Парапет">
+      </div>
+      <div class="project-card" data-category="railings">
+        <img src="{% static 'images/Railings/railing13.png' %}" alt="Парапет">
+      </div>
+      <div class="project-card" data-category="railings">
+        <img src="{% static 'images/Railings/railing9.png' %}" alt="Парапет">
+      </div>
+      <div class="project-card" data-category="railings">
+        <img src="{% static 'images/Railings/railing8.png' %}" alt="Парапет">
+      </div>
+      <div class="project-card" data-category="railings">
+        <img src="{% static 'images/Railings/railing7.png' %}" alt="Парапет">
+      </div>
+      <div class="project-card" data-category="railings">
+        <img src="{% static 'images/Railings/railing6.png' %}" alt="Парапет">
+      </div>
+      <div class="project-card" data-category="railings">
+        <img src="{% static 'images/Railings/railing3.png' %}" alt="Парапет">
+      </div>
+      <div class="project-card" data-category="railings">
+        <img src="{% static 'images/Railings/railing2.png' %}" alt="Парапет">
+      </div>
+      <div class="project-card" data-category="railings">
+        <img src="{% static 'images/Railings/railing1.png' %}" alt="Парапет">
+      </div>
+      <div class="project-card" data-category="railings">
+        <img src="{% static 'images/Railings/railing11.png' %}" alt="Парапет">
+      </div>
+      <div class="project-card" data-category="railings">
+        <img src="{% static 'images/Railings/parapet2.jpg' %}" alt="Парапет">
+      </div>
+      <div class="project-card" data-category="railings">
+        <img src="{% static 'images/Railings/panel8.png' %}" alt="Парапет">
+      </div>
+      <div class="project-card" data-category="railings">
+        <img src="{% static 'images/Railings/panel7.png' %}" alt="Парапет">
+      </div>
+      <div class="project-card" data-category="railings">
+        <img src="{% static 'images/Railings/panel6.png' %}" alt="Парапет">
+      </div>
+      <div class="project-card" data-category="railings">
+        <img src="{% static 'images/Railings/panel5.png' %}" alt="Парапет">
+      </div>
+      <div class="project-card" data-category="railings">
+        <img src="{% static 'images/Railings/panel3.png' %}" alt="Парапет">
+      </div>
+
+      
+      <!-- Алуминиеви перголи -->
+      <div class="project-card" data-category="pergolas">
+        <img src="{% static 'images/pergolas/pergola1.png' %}" alt="Алуминиева пергола">
+      </div>
+
+      <div class="project-card" data-category="pergolas">
+        <img src="{% static 'images/pergolas/pergola2.png' %}" alt="Алуминиева пергола">
+      </div>
+
+      <div class="project-card" data-category="pergolas">
+        <img src="{% static 'images/pergolas/pergola3.png' %}" alt="Алуминиева пергола">
+      </div>
+
+      <div class="project-card" data-category="pergolas">
+        <img src="{% static 'images/pergolas/pergola4.png' %}" alt="Алуминиева пергола">
+      </div>
+
+      <div class="project-card" data-category="pergolas">
+        <img src="{% static 'images/pergolas/pergola5.png' %}" alt="Алуминиева пергола">
+      </div>
+
+      <div class="project-card" data-category="pergolas">
+        <img src="{% static 'images/pergolas/pergola6.png' %}" alt="Алуминиева пергола">
+      </div>
+
+      <div class="project-card" data-category="pergolas">
+        <img src="{% static 'images/pergolas/pergola7.png' %}" alt="Алуминиева пергола">
+      </div>
+
+      <div class="project-card" data-category="pergolas">
+        <img src="{% static 'images/pergolas/pergola8.png' %}" alt="Алуминиева пергола">
+      </div>
+
+      <div class="project-card" data-category="pergolas">
+        <img src="{% static 'images/pergolas/pergola9.png' %}" alt="Алуминиева пергола">
+      </div>
+
+      <!-- Ролетни щори -->
+      <div class="project-card" data-category="blinds">
+        <img src="{% static 'images/rollerBlinds/roller1.png' %}" alt="Ролетна щора">
+      </div>
+
+      <div class="project-card" data-category="blinds">
+        <img src="{% static 'images/rollerBlinds/roller2.png' %}" alt="Ролетна щора">
+      </div>
+
+      <div class="project-card" data-category="blinds">
+        <img src="{% static 'images/rollerBlinds/roller3.png' %}" alt="Ролетна щора">
+      </div>
+
+      <div class="project-card" data-category="blinds">
+        <img src="{% static 'images/rollerBlinds/roller4.png' %}" alt="Ролетна щора">
+      </div>
+
+      <div class="project-card" data-category="blinds">
+        <img src="{% static 'images/rollerBlinds/roller5.png' %}" alt="Ролетна щора">
+      </div>
+
+      <div class="project-card" data-category="blinds">
+        <img src="{% static 'images/rollerBlinds/roller6.png' %}" alt="Ролетна щора">
+      </div>
+
+      <div class="project-card" data-category="blinds">
+        <img src="{% static 'images/rollerBlinds/roller7.png' %}" alt="Ролетна щора">
+      </div>
+
+      <div class="project-card" data-category="blinds">
+        <img src="{% static 'images/rollerBlinds/roller8.png' %}" alt="Ролетна щора">
+      </div>
+
+      <div class="project-card" data-category="blinds">
+        <img src="{% static 'images/rollerBlinds/roller9.png' %}" alt="Ролетна щора">
+      </div>
+
+      <!-- Екстериорен дизайн -->
+      <div class="project-card" data-category="exterior">
+        <img src="{% static 'images/ograda2.jpg' %}" alt="Екстериорен дизайн">
+      </div>
+
+      <div class="project-card" data-category="exterior">
+        <img src="{% static 'images/pano1.jpg' %}" alt="Екстериорен дизайн">
+      </div>
+
+      <div class="project-card" data-category="exterior">
+        <img src="{% static 'images/pano2.jpg' %}" alt="Екстериорен дизайн">
+      </div>
+
+    </section>
+  </main>
+
+    <footer class="site-footer">
+  <div class="footer-container">
+
+    <div class="footer-column footer-brand">
+      <h2>Недацвет</h2>
       <p>
-        <a href="{% url 'panels' %}">ЛАЗЕРНО ИЗРЯЗАНИ ПАНА</a>
+        Над 30 години опит в изработката на метални парапети, огради, перголи,
+        ролетни щори и декоративни елементи.
       </p>
-        <p>
-        <a href="{% url 'railings' %}">АЛУМИНИЕВИ / МЕТАЛНИ / СТЪКЛЕНИ ПАРАПЕТИ</a>
-      </p>
+    </div>
+
+    <div class="footer-column">
+      <h3>Навигация</h3>
+      <a href="{% url 'home' %}">Начало</a>
+      <a href="{% url 'gallery' %}">Галерия</a>
+      <a href="{% url 'gallery' %}">Услуги</a>
+      <a href="{% url 'contact' %}">Контакти</a>
+    </div>
+
+    <div class="footer-column">
+      <h3>Услуги</h3>
+      <a href="{% url 'gallery' %}">Лазерно рязани пана</a>
+      <a href="{% url 'gallery' %}">Парапети</a>
+      <a href="{% url 'gallery' %}">Перголи</a>
+      <a href="{% url 'gallery' %}">Корнизи</a>
+      <a href="{% url 'gallery' %}">Ролетни щори</a>
+      <a >И много други</a>
+    </div>
+
+    <div class="footer-column footer-contact">
+      <h3>Контакти</h3>
+
+      <p class="footer-phone-row">
+  <span>☎</span>
+
+  <span class="footer-phone-links">
+    <a href="tel:+359888457065">+359 888 457 065</a>
+    <a href="tel:+359877171301">+359 877 171 301</a>
+  </span>
+</p>
+
       <p>
-        <a href="{% url 'aluminumPergolas' %}">АЛУМИНИЕВИ ПЕРГУЛИ</a>
-      </p>
-        <p>
-        <a href="{% url 'rollerBlinds' %}">РОЛЕТНИ ЩОРИ</a>
-      <p>
-        <a href="{% url 'exteriorDesign' %}">ЕКСТЕРИОРЕН ДИЗАЙН</a>
+        <span>✉</span>
+        <a href="mailto:nedacvet@abv.bg">nedacvet@abv.bg</a>
       </p>
 
+      <p>
+        <span>⌖</span>
+        гр. Бургас, България
+      </p>
     </div>
-    <div class="gallery-grid">
-      <img src="{% static 'images/facade1.jpg' %}" alt="Проект 1">
-      <img src="{% static 'images/fence2.jpg' %}" alt="Проект 2">
-      <img src="{% static 'images/pano2.jpg' %}" alt="Проект 3">
-      <img src="{% static 'images/railing6.png' %}" alt="Проект 4">
-      <img src="{% static 'images/pergula2.jpg' %}" alt="Проект 5">
-      <img src="{% static 'images/pano1.jpg' %}" alt="Проект 6">
-    </div>
+
   </div>
-  <footer>
-    <center><span style="color: #fff;">[WORK IN PROGRESS]</span></center>
-  </footer>
+</footer>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const buttons = document.querySelectorAll(".filter-btn");
+      const cards = document.querySelectorAll(".project-card");
+
+      buttons.forEach((button) => {
+        button.addEventListener("click", () => {
+          const filter = button.dataset.filter;
+
+          buttons.forEach((btn) => btn.classList.remove("active"));
+          button.classList.add("active");
+
+          cards.forEach((card) => {
+            const category = card.dataset.category;
+
+            if (filter === "all" || category === filter) {
+              card.classList.remove("hidden");
+            } else {
+              card.classList.add("hidden");
+            }
+          });
+        });
+      });
+    });
+  </script>
+
 </body>
 </html>
