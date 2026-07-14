@@ -12,17 +12,44 @@
 </head>
 <body>
 
-  <header>
-    <div class="logo">
-      <a href="{% url 'home' %}">Недацвет</a>
+  <header class="main-header">
+  <div class="navbar">
+
+    <a class="nav-brand" href="{% url 'home' %}">
+      <div class="brand-mark">
+        <span>Н</span>
+      </div>
+
+      <div class="brand-text">
+        <strong>Недацвет</strong>
+        <small>Качество. Дизайн. Устойчивост.</small>
+      </div>
+    </a>
+
+    <div class="nav-divider"></div>
+
+    <nav class="nav-links">
+      <a href="{% url 'home' %}">Начало</a>
+      <a class="active" href="{% url 'gallery' %}">Галерия</a>
+      <a href="{% url 'contact' %}">Контакти</a>
+    </nav>
+
+    <div class="nav-contact">
+      <span class="phone-icon">☎</span>
+
+      <div class="phone-numbers">
+        <a href="tel:+359888457065">+359 888 457 065</a>
+        <a href="tel:+359877171301">+359 877 171 301</a>
+      </div>
     </div>
 
-    <nav>
-      <a href="{% url 'home' %}">начало</a>
-      <a href="{% url 'gallery' %}" style="color:#fff;">галерия</a>
-      <a href="{% url 'contact' %}">контакти</a>
-    </nav>
-  </header>
+    <a class="nav-cta" href="{% url 'contact' %}">
+      Поискай оферта
+      <span>→</span>
+    </a>
+
+  </div>
+</header>
 
   <main class="projects-page">
     <h1>Нашите проекти</h1>
